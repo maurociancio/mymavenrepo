@@ -1,5 +1,6 @@
 exceptions/target/
 dataaccessobject/target/
+jpadao/target/
 .classpath
 .project
 .settings
