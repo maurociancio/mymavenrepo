@@ -2,6 +2,7 @@ exceptions/target/
 dataaccessobject/target/
 jpadao/target/
 wicket-utils/target/
+utils/target/
 .classpath
 .project
 .settings
