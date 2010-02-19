@@ -12,6 +12,7 @@
     		<groupId>org.apache.wicket</groupId>
     		<artifactId>wicket</artifactId>
     		<version>1.4.6</version>
+            <scope>provided</scope>
     	</dependency>
     </dependencies>
     <build>
