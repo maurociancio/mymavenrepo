@@ -1,4 +1,4 @@
-package ar.noxit.web.wicket;
+package ar.noxit.web.wicket.image;
 
 import org.apache.wicket.markup.ComponentTag;
 import org.apache.wicket.markup.html.WebComponent;
