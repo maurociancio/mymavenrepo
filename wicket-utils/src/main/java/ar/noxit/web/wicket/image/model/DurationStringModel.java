@@ -47,4 +47,13 @@ public class DurationStringModel extends AbstractReadOnlyModel<String> {
         return (horas > 0 ? horas + ":" : "0:") + ((minutos < 10 ? "0" : "") + minutos + ":")
                 + (segundos < 10 ? "0" : "") + segundos;
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void detach() {
+        super.detach();
+        durationModel.detach();
+    }
 }
