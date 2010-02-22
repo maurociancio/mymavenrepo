@@ -26,6 +26,9 @@ public abstract class AdapterModel<N, O> implements IModel<N> {
      *            model to be wrapped
      */
     public AdapterModel(IModel<O> delegate) {
+        if (delegate == null) {
+            throw new IllegalArgumentException("delegate cannot be null");
+        }
         this.delegate = delegate;
     }
 
