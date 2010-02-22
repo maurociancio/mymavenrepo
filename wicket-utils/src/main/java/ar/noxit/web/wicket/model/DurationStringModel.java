@@ -1,4 +1,4 @@
-package ar.noxit.web.wicket.image.model;
+package ar.noxit.web.wicket.model;
 
 import org.apache.wicket.model.AbstractReadOnlyModel;
 import org.apache.wicket.model.IModel;
