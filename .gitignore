@@ -1,10 +1,10 @@
 exceptions/target/
 dataaccessobject/target/
-jpadao/target/
+jpa-dao/target/
 wicket-utils/target/
 utils/target/
 guicewarp-dao/target/
-hibernate-dao/target/
+hibernate-translator-dao/target/
 translator-dao/target/
 .classpath
 .project

@@ -11,11 +11,11 @@
     <modules>
         <module>dataaccessobject</module>
         <module>exceptions</module>
-        <module>jpadao</module>
+        <module>jpa-dao</module>
         <module>utils</module>
         <module>wicket-utils</module>
         <module>guicewarp-dao</module>
-        <module>hibernate-dao</module>
+        <module>hibernate-translator-dao</module>
         <module>translator-dao</module>
     </modules>
 </project>
