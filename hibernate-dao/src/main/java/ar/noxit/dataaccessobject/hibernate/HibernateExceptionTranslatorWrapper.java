@@ -1,6 +1,6 @@
 package ar.noxit.dataaccessobject.hibernate;
 
-import ar.noxit.dataaccessobject.IExceptionTranslationWrapper;
+import ar.noxit.dataaccessobject.IExceptionTranslatorWrapper;
 
 import ar.noxit.dataaccessobject.IDao;
 import java.io.Serializable;
@@ -12,7 +12,7 @@ import net.sf.cglib.proxy.Enhancer;
  * @author Mauro Ciancio
  * 
  */
-public class HibernateExceptionTranslatorWrapper implements IExceptionTranslationWrapper {
+public class HibernateExceptionTranslatorWrapper implements IExceptionTranslatorWrapper {
 
     /**
      * {@inheritDoc}

@@ -10,7 +10,7 @@ import java.io.Serializable;
  * @author Mauro Ciancio
  * 
  */
-public interface IExceptionTranslationWrapper {
+public interface IExceptionTranslatorWrapper {
 
     /**
      * Wraps a dao.
