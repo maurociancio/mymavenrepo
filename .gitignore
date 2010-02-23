@@ -3,6 +3,7 @@ dataaccessobject/target/
 jpadao/target/
 wicket-utils/target/
 utils/target/
+guicewarp-dao/target/
 .classpath
 .project
 .settings
