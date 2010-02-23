@@ -5,6 +5,7 @@ wicket-utils/target/
 utils/target/
 guicewarp-dao/target/
 hibernate-dao/target/
+translator-dao/target/
 .classpath
 .project
 .settings
