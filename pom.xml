@@ -14,5 +14,6 @@
         <module>jpadao</module>
         <module>utils</module>
         <module>wicket-utils</module>
+        <module>guicewarp-dao</module>
     </modules>
 </project>
