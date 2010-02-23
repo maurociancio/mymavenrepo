@@ -1,6 +1,7 @@
 package ar.noxit.dataaccessobject.hibernate;
 
 import ar.noxit.dataaccessobject.IDao;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import javax.persistence.PersistenceException;
 import net.sf.cglib.proxy.MethodInterceptor;
@@ -42,17 +43,23 @@ public class HibernateExceptionTranslatorInterceptor implements MethodIntercepto
     public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
         try {
             return method.invoke(dao, args);
-        } catch (PersistenceException e) {
+        } catch (InvocationTargetException e) {
             // jpa exception
-            try {
-                throw e.getCause();
-            } catch (ObjectNotFoundException ex) {
-                throw new ar.noxit.exceptions.persistence.ObjectNotFoundException("El objeto no se encontró", ex);
-            } catch (NonUniqueObjectException ex) {
-                throw new ar.noxit.exceptions.persistence.NonUniqueException("Objecto duplicado", e);
-            } catch (Throwable ex) {
-                throw new ar.noxit.exceptions.persistence.PersistenceException("Excepción irrecuperable", ex);
+            Throwable cause = e.getCause();
+
+            if (cause instanceof PersistenceException) {
+                try {
+                    throw cause.getCause();
+                } catch (ObjectNotFoundException ex) {
+                    throw new ar.noxit.exceptions.persistence.ObjectNotFoundException("El objeto no se encontró", ex);
+                } catch (NonUniqueObjectException ex) {
+                    throw new ar.noxit.exceptions.persistence.NonUniqueException("Objecto duplicado", e);
+                } catch (Exception ex) {
+                    throw new ar.noxit.exceptions.persistence.PersistenceException("Excepción irrecuperable", ex);
+                }
             }
+
+            throw new ar.noxit.exceptions.persistence.PersistenceException("Excepción irrecuperable", e);
         } catch (Exception ex) {
             // other exception type
             if (!(ex instanceof ar.noxit.exceptions.persistence.PersistenceException)) {
