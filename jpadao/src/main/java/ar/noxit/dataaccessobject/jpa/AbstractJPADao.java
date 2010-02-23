@@ -99,7 +99,7 @@ public abstract class AbstractJPADao<T, K extends Serializable> implements IDao<
      * 
      * @return the entity manager
      */
-    private EntityManager getEntityManager() {
+    protected EntityManager getEntityManager() {
         return entityManager;
     }
 
