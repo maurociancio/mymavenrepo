@@ -15,5 +15,7 @@
         <module>utils</module>
         <module>wicket-utils</module>
         <module>guicewarp-dao</module>
+        <module>hibernate-dao</module>
+        <module>translator-dao</module>
     </modules>
 </project>
