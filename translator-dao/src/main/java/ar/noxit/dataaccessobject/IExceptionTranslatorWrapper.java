@@ -1,6 +1,5 @@
 package ar.noxit.dataaccessobject;
 
-import ar.noxit.dataaccessobject.IDao;
 import java.io.Serializable;
 
 /**
@@ -24,4 +23,19 @@ public interface IExceptionTranslatorWrapper {
      * @return a wrapped dao
      */
     public <T, K extends Serializable> IDao<T, K> translationWrapper(IDao<T, K> dao);
+
+    /**
+     * Wraps a dao.
+     * 
+     * @param <T>
+     *            type of the class
+     * @param <K>
+     *            type of the class' id
+     * @param dao
+     *            to be wrapped
+     * @param extraInterfaces
+     *            interfaces to be implemented (can be null)
+     * @return a wrapped dao
+     */
+    public <T, K extends Serializable> IDao<T, K> translationWrapper(IDao<T, K> dao, Class<?> extraInterfaces[]);
 }
