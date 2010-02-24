@@ -7,6 +7,7 @@ guicewarp-dao/target/
 hibernate-translator-dao/target/
 translator-dao/target/
 rmi-process/target/
+hasher/target/
 .classpath
 .project
 .settings

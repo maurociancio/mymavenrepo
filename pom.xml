@@ -18,5 +18,6 @@
         <module>hibernate-translator-dao</module>
         <module>translator-dao</module>
         <module>rmi-process</module>
+        <module>hasher</module>
     </modules>
 </project>
