@@ -65,11 +65,27 @@ public abstract class AbstractJPADao<T, K extends Serializable> implements IDao<
     @SuppressWarnings("unchecked")
     @Override
     public List<T> getAll() throws PersistenceException {
+        return createQuery("from " + clazz.getSimpleName()).getResultList();
+    }
+
+    /**
+     * Creates a new query using the query string passed as argument.
+     * 
+     * @param query
+     *            to be created
+     * @return a query object
+     * @throws PersistenceException
+     *             if the query cannot be created
+     */
+    protected Query createQuery(String query) throws PersistenceException {
+        if (query == null) {
+            throw new IllegalArgumentException("query cannot be null");
+        }
+
         EntityManager em = getEntityManager();
         checkEntityManager(em);
 
-        Query q = em.createQuery("from " + clazz.getSimpleName());
-        return q.getResultList();
+        return em.createQuery(query);
     }
 
     /**
