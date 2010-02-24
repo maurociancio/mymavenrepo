@@ -19,12 +19,12 @@ import javax.persistence.Query;
  * @param <K>
  *            class' identifier
  */
-public abstract class AbstractJPADao<T, K extends Serializable> implements IDao<T, K> {
+public class AbstractJPADao<T, K extends Serializable> implements IDao<T, K> {
 
     /**
      * Entity's class
      */
-    private final Class<? extends T> clazz;
+    protected final Class<? extends T> clazz;
     /**
      * Entity Manager
      */

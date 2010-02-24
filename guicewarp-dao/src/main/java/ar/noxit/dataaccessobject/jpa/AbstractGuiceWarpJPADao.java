@@ -15,7 +15,7 @@ import javax.persistence.EntityManager;
  * @param <K>
  *            {@link AbstractJPADao#AbstractJPADao(Class)}
  */
-abstract public class AbstractGuiceWarpJPADao<T, K extends Serializable> extends AbstractJPADao<T, K> {
+public class AbstractGuiceWarpJPADao<T, K extends Serializable> extends AbstractJPADao<T, K> {
 
     /**
      * A entity manager provider. It's managed by warp and google guice.
