@@ -17,5 +17,6 @@
         <module>guicewarp-dao</module>
         <module>hibernate-translator-dao</module>
         <module>translator-dao</module>
+        <module>rmi-process</module>
     </modules>
 </project>
