@@ -19,5 +19,6 @@
         <module>translator-dao</module>
         <module>rmi-process</module>
         <module>hasher</module>
+        <module>wiquery-utils</module>
     </modules>
 </project>
