@@ -21,4 +21,28 @@
         <module>hasher</module>
         <module>wiquery-utils</module>
     </modules>
+	<repositories>
+	    <repository>
+	        <id>jboss</id>
+	        <url>http://repository.jboss.com/maven2</url>
+	        <releases>
+	            <enabled>true</enabled>
+	        </releases>
+	        <snapshots>
+	            <enabled>false</enabled>
+	        </snapshots>
+	    </repository>
+	</repositories>
+	<pluginRepositories>
+	    <pluginRepository>
+	        <id>jboss-plugins</id>
+	        <url>http://repository.jboss.com/maven2</url>
+	        <releases>
+	            <enabled>true</enabled>
+	        </releases>
+	        <snapshots>
+	            <enabled>false</enabled>
+	        </snapshots>
+	    </pluginRepository>
+	</pluginRepositories>
 </project>
