@@ -49,7 +49,9 @@ public class HibernateExceptionTranslatorInterceptor implements MethodIntercepto
 
             if (cause instanceof PersistenceException) {
                 try {
-                    throw cause.getCause();
+                    Throwable theCause = cause.getCause();
+                    if (theCause != null)
+                        throw theCause;
                 } catch (ObjectNotFoundException ex) {
                     throw new ar.noxit.exceptions.persistence.ObjectNotFoundException("El objeto no se encontró", ex);
                 } catch (NonUniqueObjectException ex) {
