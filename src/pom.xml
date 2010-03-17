@@ -45,4 +45,11 @@
 	        </snapshots>
 	    </pluginRepository>
 	</pluginRepositories>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>noxit-maven-repo</id>
+			<name>NoxIT Maven Repo</name>
+			<url>${noxit.maven.repo.path}</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>
