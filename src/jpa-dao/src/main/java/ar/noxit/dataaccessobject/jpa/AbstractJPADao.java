@@ -120,6 +120,16 @@ public class AbstractJPADao<T, K extends Serializable> implements IDao<T, K> {
     }
 
     /**
+     * Entity Manager setter.
+     * 
+     * @param entityManager
+     *            to be setted
+     */
+    public void setEntityManager(EntityManager entityManager) {
+        this.entityManager = entityManager;
+    }
+
+    /**
      * Checks entity manager's state
      * 
      * @param em
