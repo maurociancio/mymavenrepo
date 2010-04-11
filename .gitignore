@@ -9,6 +9,7 @@ src/translator-dao/target/
 src/rmi-process/target/
 src/hasher/target/
 src/wiquery-utils/target/
+src/hibernate-dao/target/
 .classpath
 .project
 .settings

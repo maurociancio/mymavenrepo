@@ -20,6 +20,7 @@
         <module>rmi-process</module>
         <module>hasher</module>
         <module>wiquery-utils</module>
+        <module>hibernate-dao</module>
     </modules>
 	<repositories>
 	    <repository>
