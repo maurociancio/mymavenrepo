@@ -25,7 +25,7 @@ public class HibernateDao<T, K extends Serializable> implements IDao<T, K> {
 
     @Override
     public void delete(T object) throws PersistenceException {
-        getSession().delete(object);
+        getSession().delete(clazz.getSimpleName(), object);
     }
 
     @Override
@@ -42,7 +42,7 @@ public class HibernateDao<T, K extends Serializable> implements IDao<T, K> {
 
     @Override
     public void save(T object) throws PersistenceException {
-        getSession().persist(object);
+        getSession().persist(clazz.getSimpleName(), object);
     }
 
     public void setSessionFactory(SessionFactory sessionFactory) {
