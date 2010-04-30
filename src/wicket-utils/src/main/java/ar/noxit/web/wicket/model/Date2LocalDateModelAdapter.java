@@ -1,5 +1,6 @@
 package ar.noxit.web.wicket.model;
 
+import java.util.Calendar;
 import java.util.Date;
 import org.apache.wicket.model.IModel;
 import org.joda.time.LocalDate;
@@ -10,16 +11,15 @@ public class Date2LocalDateModelAdapter extends AdapterModel<Date, LocalDate> {
         super(delegate);
     }
 
-    @SuppressWarnings("deprecation")
     @Override
     protected Date getObject(IModel<LocalDate> delegate) {
         LocalDate date = delegate.getObject();
         if (date == null)
             return null;
-        int year = date.getYear();
-        int monthOfYear = date.getMonthOfYear();
-        int dayOfMonth = date.getDayOfMonth();
-        return new Date(year, monthOfYear, dayOfMonth);
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(date.getYear(), date.getMonthOfYear() - 1, date.getDayOfMonth(), 0, 0, 0);
+        return calendar.getTime();
     }
 
     @Override
