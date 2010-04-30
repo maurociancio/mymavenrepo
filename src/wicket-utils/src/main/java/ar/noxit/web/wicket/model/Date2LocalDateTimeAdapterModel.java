@@ -31,7 +31,7 @@ public class Date2LocalDateTimeAdapterModel extends AdapterModel<Date, LocalDate
         int secondOfMinute = ldt.getSecondOfMinute();
 
         Calendar calendar = Calendar.getInstance();
-        calendar.set(year, monthOfYear, dayOfMonth, hourOfDay, minuteOfHour, secondOfMinute);
+        calendar.set(year, monthOfYear - 1, dayOfMonth, hourOfDay, minuteOfHour, secondOfMinute);
         return calendar.getTime();
     }
 
