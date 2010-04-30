@@ -12,6 +12,7 @@
         <module>dataaccessobject</module>
         <module>exceptions</module>
         <module>jpa-dao</module>
+        <module>jpa2-dao</module>
         <module>utils</module>
         <module>wicket-utils</module>
         <module>guicewarp-dao</module>

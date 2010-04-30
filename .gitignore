@@ -1,6 +1,7 @@
 src/exceptions/target/
 src/dataaccessobject/target/
 src/jpa-dao/target/
+src/jpa2-dao/target/
 src/wicket-utils/target/
 src/utils/target/
 src/guicewarp-dao/target/
