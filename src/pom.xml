@@ -34,6 +34,16 @@
 	            <enabled>false</enabled>
 	        </snapshots>
 	    </repository>
+	    <repository>
+	        <id>noxit-repo</id>
+	        <url>http://repo.noxit.com.ar/svn/mavenrepo/trunk/repo</url>
+	        <releases>
+	            <enabled>true</enabled>
+	        </releases>
+	        <snapshots>
+	            <enabled>true</enabled>
+	        </snapshots>
+	    </repository>
 	</repositories>
 	<pluginRepositories>
 	    <pluginRepository>
