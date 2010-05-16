@@ -53,6 +53,8 @@ public abstract class IdLDM<T, K extends Serializable> implements IModel<T> {
         this.object = object;
         if (object != null) {
             idModel.setObject(getObjectId(object));
+        } else {
+            idModel.setObject(null);
         }
     }
 
