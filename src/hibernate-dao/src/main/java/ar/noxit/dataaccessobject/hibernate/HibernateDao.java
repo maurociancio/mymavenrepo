@@ -10,13 +10,20 @@ import org.hibernate.SessionFactory;
 public class HibernateDao<T, K extends Serializable> implements IDao<T, K> {
 
     private SessionFactory sessionFactory;
-    private final Class<? extends T> clazz;
+    private final String entityName;
 
     public HibernateDao(Class<? extends T> clazz) {
         if (clazz == null) {
             throw new IllegalArgumentException("class no puede ser null");
         }
-        this.clazz = clazz;
+        this.entityName = clazz.getSimpleName();
+    }
+
+    public HibernateDao(String entityName) {
+        if (entityName == null) {
+            throw new IllegalArgumentException("entityName no puede ser null");
+        }
+        this.entityName = entityName;
     }
 
     protected Session getSession() {
@@ -25,24 +32,24 @@ public class HibernateDao<T, K extends Serializable> implements IDao<T, K> {
 
     @Override
     public void delete(T object) throws PersistenceException {
-        getSession().delete(clazz.getSimpleName(), object);
+        getSession().delete(entityName, object);
     }
 
     @Override
     @SuppressWarnings("unchecked")
     public T get(K id) throws PersistenceException {
-        return (T) getSession().get(clazz.getSimpleName(), id);
+        return (T) getSession().get(entityName, id);
     }
 
     @Override
     @SuppressWarnings("unchecked")
     public List<T> getAll() throws PersistenceException {
-        return getSession().createQuery("from " + clazz.getSimpleName()).list();
+        return getSession().createQuery("from " + entityName).list();
     }
 
     @Override
     public void save(T object) throws PersistenceException {
-        getSession().persist(clazz.getSimpleName(), object);
+        getSession().persist(entityName, object);
     }
 
     public void setSessionFactory(SessionFactory sessionFactory) {
