@@ -45,5 +45,18 @@
                 </configuration>
             </plugin>
         </plugins>
-    </build>    
+    </build>
+    <repositories>
+        <repository>
+            <id>noxit maven repo</id>
+            <name>noxit maven repo</name>
+            <url>http://maurociancio.github.com/mymavenrepo</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
