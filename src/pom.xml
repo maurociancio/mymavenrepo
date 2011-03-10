@@ -6,7 +6,7 @@
     <groupId>ar.noxit</groupId>
     <artifactId>maven-repo</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <name>Noxit Repository</name>
     <modules>
         <module>dataaccessobject</module>
@@ -36,7 +36,7 @@
 	    </repository>
 	    <repository>
 	        <id>noxit-repo</id>
-	        <url>http://repo.noxit.com.ar/svn/mavenrepo/trunk/repo</url>
+	        <url>http://maurociancio.github.com/mymavenrepo</url>
 	        <releases>
 	            <enabled>true</enabled>
 	        </releases>
@@ -58,6 +58,11 @@
 	    </pluginRepository>
 	</pluginRepositories>
 	<distributionManagement>
+		<repository>
+			<id>noxit-maven-repo</id>
+			<name>NoxIT Maven Repo</name>
+			<url>file://${noxit.maven.repo.path}</url>
+		</repository>
 		<snapshotRepository>
 			<id>noxit-maven-repo</id>
 			<name>NoxIT Maven Repo</name>

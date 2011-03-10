@@ -3,13 +3,13 @@
     <parent>
         <groupId>ar.noxit</groupId>
         <artifactId>maven-repo</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>ar.noxit</groupId>
     <artifactId>hibernate-translator-dao</artifactId>
     <packaging>jar</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <name>hibernate-translator-dao</name>
     <url>http://maven.apache.org</url>
     <dependencies>
@@ -21,17 +21,17 @@
         <dependency>
             <groupId>ar.noxit</groupId>
             <artifactId>dataaccessobject</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0</version>
         </dependency>
         <dependency>
             <groupId>ar.noxit</groupId>
             <artifactId>jpa-dao</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0</version>
         </dependency>
         <dependency>
             <groupId>ar.noxit</groupId>
             <artifactId>translator-dao</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0</version>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
